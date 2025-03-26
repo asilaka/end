@@ -6,9 +6,9 @@ import About from './pages/About';
 import Discover from './pages/Discover';
 import Header from './components/Header/Header';
 import Wishlist from './components/Wishlist/Wishlist';
-import Join from './components/Join/Join';
 import More from './pages/More';
-import Akk from './pages/akk';
+import Akk from './pages/Akk';
+
 
 const App = () => {
   return (
