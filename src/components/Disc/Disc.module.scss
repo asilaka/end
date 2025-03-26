@@ -1,0 +1,259 @@
+.quizContainer {
+  text-align: center;
+  padding: 20px;
+  background-color: #1a1a2e;
+  background-image: url('/back-1.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(3px);
+  position: absolute;
+  z-index: -1;
+  min-height: 100vh;
+  width: 100%;
+  color: white;
+
+  animation: swiper 40s infinite alternate steps(4, end);
+  .anime {
+    margin-bottom: 20px;
+  }
+}
+
+@keyframes swiper {
+  0% {
+    background-image: url('/back-1.jpeg');
+  }
+  33% {
+    background-image: url('/back-2.png');
+  }
+  66% {
+    background-image: url('/back-3.png');
+  }
+  100% {
+    background-image: url('/back-4.png');
+  }
+}
+
+.disc {
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quizImage {
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+  @media (max-width: 430px) {
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+.question {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.options {
+  margin-bottom: 20px;
+}
+
+.optionButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+
+  @media (max-width: 500px) {
+    font-size: 14px;
+  }
+  @media (max-width: 450px) {
+    font-size: 12px;
+  }
+  @media (max-width: 350px) {
+    font-size: 9px;
+    padding: 8px 9px;
+  }
+}
+
+.optionButton:hover {
+  background-color: #45a049;
+}
+
+.score {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.feedback {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 1;
+  display: inline-block;
+}
+
+.feedback.correct {
+  background-color: #4caf50;
+  color: white;
+  animation: bounce 0.5s ease-in-out;
+}
+
+.feedback.incorrect {
+  background-color: #f44336;
+  color: white;
+  animation: shake 0.5s ease-in-out;
+}
+
+// @keyframes bounce {
+//   0% {
+//     transform: scale(1);
+//   }
+//   50% {
+//     transform: scale(1.1);
+//   }
+//   100% {
+//     transform: scale(1);
+//   }
+// }
+
+// @keyframes shake {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   33% {
+//     transform: translateX(-10px);
+//   }
+//   66% {
+//     transform: translateX(10px);
+//   }
+//   75% {
+//     transform: translateX(-10px);
+//   }
+//   100% {
+//     transform: translateX(0);
+//   }
+// }
+
+.correctIcon,
+.incorrectIcon {
+  margin-right: 10px;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+/* Стили для результата */
+.resultContainer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resultContainer h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.resultContainer p {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Стили для кнопки перезапуска */
+.restartButton {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.restartButton:hover {
+  background-color: #45a049;
+}
+
+.restartButton:active {
+  background-color: #3d8b40;
+}
+
+.slider {
+  overflow: hidden;
+  width: 100dvw;
+  height: 100dvh;
+  position: absolute;
+  z-index: -1;
+  filter: blur(3px);
+
+}
+
+.slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: slide 10s infinite;
+}
+
+.slider .slide:nth-child(1) {
+  background-image: url('/back-1.jpeg');
+  animation-delay: -0;
+}
+
+.slider .slide:nth-child(2) {
+  background-image: url('/back-2.png');
+  animation-delay: -2s;
+}
+
+.slider .slide:nth-child(3) {
+  background-image: url('/back-3.png');
+  animation-delay: -4s;
+}
+
+.slider .slide:nth-child(4) {
+  background-image: url('/back-4.png');
+  animation-delay: -6s;
+}
+.slider .slide:nth-child(5) {
+  background-image: url('/back-2.png');
+  animation-delay: -8s;
+}
+
+@keyframes slide {
+  0%,
+  15%,
+  100% {
+    transform: translateX(0);
+    animation-timing-function: ease;
+  }
+  20% {
+    transform: translateX(-100%);
+    animation-timing-function: step-end;
+  }
+  95% {
+    transform: translateX(100%);
+    animation-timing-function: ease;
+  }
+}

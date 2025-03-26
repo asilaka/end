@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+.sliderContainer {
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.sliderContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.979),  30%, transparent 70%, rgb(0, 0, 0));
+  z-index: -1;
+}
+
+
+.solo {
+  margin-bottom: 30px;
+  font-size: 74px;
+  font-family: "Bodoni Moda", serif;
+  text-shadow: 4px 4px 8px rgb(136, 0, 0); /* Эффект тени */
+  letter-spacing: 2px; /* Расстояние между буквами */
+
+    @media(max-width:1100px) {
+      font-size: 50px;
+    }
+    @media(max-width:850px) {
+      font-size: 40px;
+    }
+    @media(max-width:350px) {
+      font-size: 30px;
+    }
+}
+
+.swiper {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+ 
+
+}
+
+.slideImage {
+  
+  height: 530px;
+  object-fit: cover;
+  max-width: 300px;
+  transition: transform 0.3s ease; /* Плавное увеличение */
+
+  @media(max-width:1100px) {
+    width: 200px;
+    height: 100%;
+  }
+  @media(max-width:850px) {
+    width: 150px;
+    height: 100%;
+  }
+  @media(max-width:550px) {
+    width: 100px;
+    height: 100%;
+  }
+}
+
+.slideImage:hover {
+  transform: scale(1.1); /* Эффект увеличения при наведении */
+}

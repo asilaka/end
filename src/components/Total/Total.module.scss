@@ -1,0 +1,65 @@
+.total {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.cards {
+  max-width: 593px;
+  width: 100%;
+  background-color: #f4f4f4;
+  padding: 30px 30px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(137px, 1fr));
+  column-gap: 90px;
+  row-gap: 20px;
+  @media (max-width: 657px) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
+  justify-items: center;
+  h2 {
+    font-weight: 800px;
+  }
+}
+
+.demon {
+  .titan {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .name {
+    max-width: 30px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 10px;
+  }
+}
+
+.amet {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 35px;
+
+  .dolor {
+    h1 {
+      font-size: 50px;
+    }
+    h2 {
+      font-size: 30px;
+      padding-bottom: 5px;
+      color: #f37924;
+    }
+  }
+}
